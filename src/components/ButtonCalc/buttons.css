@@ -1,0 +1,11 @@
+.Numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #c9b8e4;
+  
+}
+
+.full-row {
+  grid-column: 1 / -3; /* Ocupa de la columna 1 hasta el final */
+}
