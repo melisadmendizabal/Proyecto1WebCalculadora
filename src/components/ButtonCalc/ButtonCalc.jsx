@@ -6,7 +6,7 @@ export const ButtonCalc = ({
     size = 'simple',
     background = 'pink',
     text,
-    ...props
+    onClick
 
 }) => {
     return (
@@ -14,7 +14,7 @@ export const ButtonCalc = ({
             <button
                 type = "button"
                 className={['button', `button-${size}`,`button-${background}`].join(' ')}
-                {...props}
+                onClick = {onClick}
             >
                 {text}
             </button>

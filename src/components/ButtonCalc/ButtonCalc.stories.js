@@ -1,10 +1,10 @@
 
-import { fn } from '@storybook/test';
-import { ButtonCalc } from "./ButtonCalc";
+import { fn } from '@storybook/test'
+import { ButtonCalc } from "./ButtonCalc"
 
 
 export default {
-    title: 'waaa',
+    title: 'Button styles',
     component: ButtonCalc,
     parameters: {
         layout: 'centered',
@@ -23,7 +23,7 @@ export const SimplePink = {
     },
 }
 
-export const Long= {
+export const LongWhite= {
     args: {
         size: 'long',
         background: 'white',

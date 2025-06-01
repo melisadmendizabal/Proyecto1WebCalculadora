@@ -7,6 +7,9 @@
     font-size: 25px;
     border: 0px solid ;
     cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     
 }
 

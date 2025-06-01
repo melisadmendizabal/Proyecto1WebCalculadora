@@ -1,9 +1,8 @@
-import { Buttons } from "./Buttons"
-
+import { ScreenCalc } from "./ScreenCalc"
 
 export default {
-  title: 'KeyBoard',
-  component: Buttons,
+  title: 'Screen',
+  component: ScreenCalc,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -11,6 +10,8 @@ export default {
  
 }
 
-export const PositionView = {
-
+export const View = {
+    args: {
+        value: 'guyewg'
+    },
 }

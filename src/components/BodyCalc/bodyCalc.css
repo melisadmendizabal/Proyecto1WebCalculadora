@@ -1,0 +1,11 @@
+.bodyStyle {
+    background-color: #c9b8e4;
+    height: 450px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+}

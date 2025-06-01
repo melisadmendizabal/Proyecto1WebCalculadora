@@ -1,0 +1,17 @@
+.screenStyle {
+    display: flex;
+    height: 70px;
+    width: 255px;
+    border-radius: 10px;
+    background: #9f89b7;
+
+    justify-content: right;
+    align-items: center;
+    letter-spacing: 3px;
+
+    color: #f8ebfd;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    padding: 0 10px;
+    
+}
