@@ -1,20 +1,21 @@
 import js from "@eslint/js"
 import pluginReact from "eslint-plugin-react"
+import parserBabel from "@babel/eslint-parser"
 import { defineConfig } from "eslint/config"
 
 export default defineConfig([
   {
-    // Aplica a todos tus .js y .jsx
     files: ["**/*.{js,jsx}"],
 
-    // Configuramos el parser nativo de ESLint para entender JSX
     languageOptions: {
+      parser: parserBabel,
       parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          presets: ["@babel/preset-react"],
+        },
         ecmaVersion: "latest",
         sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
       },
       globals: {
         document: "readonly",
@@ -29,11 +30,8 @@ export default defineConfig([
     },
 
     rules: {
-      // No hace falta importar React en scope
       "react/react-in-jsx-scope": "off",
-      // Enlaces target="_blank" seguros
       "react/jsx-no-target-blank": ["error", { allowReferrer: false }],
-      // Prohíbe “;”
       semi: ["error", "never"],
     },
 
@@ -42,8 +40,5 @@ export default defineConfig([
         version: "detect",
       },
     },
-  },
-
-  // Aplica las reglas recomendadas de react en flat config
-
+  }
 ])
