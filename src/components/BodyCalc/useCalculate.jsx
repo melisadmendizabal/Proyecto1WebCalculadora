@@ -2,6 +2,7 @@
 import {useState} from "react"
 
 export function useCalculate() {
+    const [buttonPressed, setButtonPressed] = useState(false);
     const [value, setValue] = useState('')
     const [preNumbers, setPreNumbers] = useState('')
     const [limpiar, setLimpiar] = useState(false)
@@ -9,6 +10,15 @@ export function useCalculate() {
     const [decimal, setDecimal] = useState(false)
     const listOper = ['+', '-', 'x', '/', 'mod']
     const listNums = [ '1','2','3','4','5','6','7','8','9','0','.']
+
+    const handleButtonPress = () => {
+        console.log('Botttton')
+        setButtonPressed(true);  // Cambiar el estado a true cuando un botón es presionado
+        setTimeout(() => {
+            setButtonPressed(false);  // Después de un tiempo, lo ponemos en false
+        }, 500);  // 100ms de espera (puedes ajustar este valor)
+    };
+
     
     const decimalControl = (resultDecimal) => {
         const str = resultDecimal.toString()
@@ -207,6 +217,8 @@ export function useCalculate() {
     return {
         value,
         setButtonsValues,
+        buttonPressed,
+        handleButtonPress,
     }
 
 }

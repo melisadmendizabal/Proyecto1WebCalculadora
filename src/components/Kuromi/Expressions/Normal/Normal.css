@@ -1,0 +1,175 @@
+.all {
+    display: flex;
+    justify-content: center;
+
+    height: 65px;
+    width: 130px;
+}
+
+.eyes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    width: 110px;
+}
+
+.eyeC{
+    display: flex;
+    height: 35px;
+    width: 30px;
+}
+
+.eyeC:last-child{
+    transform: scaleX(-1);
+}
+
+.eyeWink {
+    width: 75px;
+	height: 8px;
+	border: 5px solid #9f89b7;
+	border-top: 0px;
+    margin-top: 10px;
+    transform: scaleY(-1);
+	-moz-border-radius: 0 0 120px 120px / 0 0 90px 90px;
+	-webkit-border-radius: 0 0 120px 120px 0 0 90px 90px;
+	border-radius: 0 0 120px 120px / 0 0 90px 90px;
+}
+
+.eye {
+    position: relative; 
+    height: 35px;
+    width: 20px;
+    background-color:  #9f89b7;
+    border-radius: 50%;
+
+}
+
+
+
+.eye::before {
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 30px;
+    background-color: azure;
+    transform: rotate(20deg);
+}
+
+.eyelash {
+    position: relative; 
+    height: 15px;
+    width: 7px;
+    border-radius: 10px;
+}
+
+.eyelashR {
+    position: relative; 
+    height: 15px;
+    width: 7px;
+    margin: 0px 0px;
+    transform: rotate(25deg);
+}
+
+.eyelashR::before,
+.eyelashR::after {
+    content: '';
+    position: absolute;
+    margin-top: 10px;
+    height: 5px;
+    width: 10px;
+    background-color:  #9f89b7;
+    border-radius: 10px;
+ 
+  
+}
+
+
+.eyelashR::before {
+    top: -5px; /* Coloca el pseudo-elemento arriba */
+     /* Centra horizontalmente */
+    transform:  rotate(20deg); /* Gira y centra el pseudo-elemento */
+}
+
+.eyelashR::after {
+    bottom: -5px; /* Coloca el pseudo-elemento abajo */
+    /* Centra horizontalmente */
+    transform:  rotate(20deg); /* Gira y centra el pseudo-elemento */
+}
+
+
+
+
+.eyelash::before,
+.eyelash::after {
+    content: '';
+    position: absolute;
+    margin-top: 10px;
+    height: 5px;
+    width: 10px;
+    background-color:  #9f89b7;
+    border-radius: 10px;
+ 
+  
+}
+
+
+.eyelash::before {
+    top: -5px; /* Coloca el pseudo-elemento arriba */
+     /* Centra horizontalmente */
+    transform:  rotate(20deg); /* Gira y centra el pseudo-elemento */
+}
+
+.eyelash::after {
+    bottom: -5px; /* Coloca el pseudo-elemento abajo */
+    /* Centra horizontalmente */
+    transform:  rotate(20deg); /* Gira y centra el pseudo-elemento */
+}
+
+
+
+
+.mouth {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    justify-content: end;
+    align-items: center;
+
+    height: 50px;
+    width: 50px;
+
+    z-index: 2;
+}
+
+.nose {
+    height: 13px;
+    width:20px;
+    background-color: #c9b8e4;
+    border-radius: 100%;
+}
+
+.smile {
+    width: 25px;
+	height: 8px;
+	border: 5px solid #9f89b7;
+	border-top: 0;
+	-moz-border-radius: 0 0 120px 120px / 0 0 90px 90px;
+	-webkit-border-radius: 0 0 120px 120px 0 0 90px 90px;
+	border-radius: 0 0 120px 120px / 0 0 90px 90px;
+}
+
+.smileC {
+    
+    margin-left: 40px;
+    width: 10px;
+	height: 2px;
+	border: 5px solid #9f89b7;
+    background-color: #9f89b7;
+	-moz-border-radius: 0 0 120px 120px / 0 0 90px 90px;
+	-webkit-border-radius: 0 0 120px 120px 0 0 90px 90px;
+	border-radius: 0 0 120px 120px / 0 0 90px 90px;
+    transform: rotate(-30deg);
+}
+

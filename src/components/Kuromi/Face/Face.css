@@ -1,0 +1,11 @@
+.face {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100px;
+    width: 150px;
+    border-radius: 100%;
+
+
+    background-color: azure;
+}

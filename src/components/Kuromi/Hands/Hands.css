@@ -1,0 +1,29 @@
+.allFace {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 220px;
+    width: 310px;
+   
+
+}
+
+.hands{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    width: 220px;
+
+}
+
+.hand{
+    height: 30px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: azure;
+
+}
