@@ -1,7 +1,8 @@
 
-import {useState} from "react"
+import {useEffect, useRef, useState} from "react"
 
 export function useCalculate() {
+    const timeoutRef = useRef(null)
     const [buttonPressed, setButtonPressed] = useState(false)
     const [value, setValue] = useState('')
     const [preNumbers, setPreNumbers] = useState('')
@@ -19,13 +20,19 @@ export function useCalculate() {
         }, 500)
     }
 
+    useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current)
+    }
+  }, [])
+
     
     const decimalControl = (resultDecimal) => {
         const str = resultDecimal.toString()
         const index = str.indexOf('.')
         const notPoint = index !== -1 ? str.slice(0, index +1) : str
         const long = notPoint.length 
-        console.log('str: ',str, ', notPoint: ', notPoint , ', long: ',long)
+
 
         if (str.length < 9){
             return resultDecimal
