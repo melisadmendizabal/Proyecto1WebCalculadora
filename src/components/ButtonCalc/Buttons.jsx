@@ -8,10 +8,13 @@ import './buttons.css'
         <div className= "Numbers">         
             {simbolos.map((simbolo, index) => {
                 if (operadores.includes(simbolo) ) {
-                    return ( <ButtonCalc key= {index} size = 'simple' background = 'pink' text = {simbolo} onClick = {() => {setButtonsValues(simbolo); onButtonsPress(); }}></ButtonCalc> )
-                } else if (simbolo === '0') { return ( <div  className = 'full-row'><ButtonCalc size = 'long' background = 'white' text = '0' onClick = {() => setButtonsValues(simbolo)}></ButtonCalc></div> )
-                } else { return ( <ButtonCalc key= {index} size = 'simple' background = 'white' text = {simbolo} onClick = {() => {setButtonsValues(simbolo); onButtonsPress();}}></ButtonCalc> )}
+                    return ( <ButtonCalc key= {index} size = 'simple' background = 'pink' text = {simbolo} 
+                     onClick = {() => {setButtonsValues(simbolo); onButtonsPress() }}></ButtonCalc> )
+                } else if (simbolo === '0') { return ( <div  className = 'full-row'><ButtonCalc size = 'long' 
+                    background = 'white' text = '0' 
+                    onClick = {() => setButtonsValues(simbolo)}></ButtonCalc></div> )
+                } else { return ( <ButtonCalc key= {index} size = 'simple' background = 'white' text = {simbolo} 
+                    onClick = {() => {setButtonsValues(simbolo); onButtonsPress()}}></ButtonCalc> )}
             })}
         </div>
-        )
- }
+)}

@@ -2,7 +2,7 @@
 import {useState} from "react"
 
 export function useCalculate() {
-    const [buttonPressed, setButtonPressed] = useState(false);
+    const [buttonPressed, setButtonPressed] = useState(false)
     const [value, setValue] = useState('')
     const [preNumbers, setPreNumbers] = useState('')
     const [limpiar, setLimpiar] = useState(false)
@@ -13,11 +13,11 @@ export function useCalculate() {
 
     const handleButtonPress = () => {
         console.log('Botttton')
-        setButtonPressed(true);  // Cambiar el estado a true cuando un botón es presionado
+        setButtonPressed(true)
         setTimeout(() => {
-            setButtonPressed(false);  // Después de un tiempo, lo ponemos en false
-        }, 500);  // 100ms de espera (puedes ajustar este valor)
-    };
+            setButtonPressed(false)
+        }, 500)
+    }
 
     
     const decimalControl = (resultDecimal) => {
@@ -83,7 +83,7 @@ export function useCalculate() {
                 setValue('')
                 setLimpiar(true)
              }
-            return; // Ignora input si hay error en pantalla
+            return // Ignora input si hay error en pantalla
         }
         
          
@@ -95,7 +95,7 @@ export function useCalculate() {
                     setPreNumbers(value) // usa el valor como primer operando
                     setSigno(input)
                     setLimpiar(false)
-                    return;
+                    return
                 }
                 // resto de lógica...
             }
@@ -125,21 +125,21 @@ export function useCalculate() {
             }
 
         } else if (input === '+/-'){
-            if (value === '') return;
+            if (value === '') return
 
-            const flipped = (-parseFloat(value)).toString();
+            const flipped = (-parseFloat(value)).toString()
 
             // Evita que se pase de 9 caracteres
             if (flipped.length > 9) {
-                setValue('ERROR');
-                return;
+                setValue('ERROR')
+                return
             }
 
-            setValue(flipped);
-            setPreNumbers('');
-            setSigno('');
+            setValue(flipped)
+            setPreNumbers('')
+            setSigno('')
 
-            setLimpiar(true);
+            setLimpiar(true)
                 
         
 
@@ -147,10 +147,10 @@ export function useCalculate() {
 
         } else if (input === "C") {
             // Limpiar todo
-            setValue("");
-            setPreNumbers("");
-            setDecimal(false);
-            setLimpiar(true);
+            setValue("")
+            setPreNumbers("")
+            setDecimal(false)
+            setLimpiar(true)
 
         } else if (input !== "=") {
             if (preNumbers && signo && value) {
@@ -161,51 +161,51 @@ export function useCalculate() {
                 setLimpiar(true)
             }
             // Si presionan un operador
-            setDecimal(false);
-            setSigno(input);
+            setDecimal(false)
+            setSigno(input)
 
             if (preNumbers !== "") {
                 // Si ya hay un número previo, realiza la operación
-                const a = parseFloat(preNumbers);
-                const b = parseFloat(value);
-                const result = operate(a, b, signo);
+                const a = parseFloat(preNumbers)
+                const b = parseFloat(value)
+                const result = operate(a, b, signo)
                 if (result === "ERROR") {
-                    setValue(result);
+                    setValue(result)
                 } else {
                     console.log('aaaaa')
-                    setPreNumbers(result);
-                    setValue(result.toString());
+                    setPreNumbers(result)
+                    setValue(result.toString())
                 }
             } else {
-                setPreNumbers(value); // Guarda el número actual para la siguiente operación
+                setPreNumbers(value) // Guarda el número actual para la siguiente operación
                 
             }
           
             
-            setLimpiar(true);
+            setLimpiar(true)
              
             //setValue("");
 
        
         } else {
             // Si presionan "=" para ejecutar la operación
-            const a = parseFloat(preNumbers);
-            const b = parseFloat(value);
+            const a = parseFloat(preNumbers)
+            const b = parseFloat(value)
 
             if (!limpiar && preNumbers !== "" && signo !== "") {
-                const result = operate(a, b, signo);
+                const result = operate(a, b, signo)
                 if (result === "ERROR") {
-                    setValue(result);
+                    setValue(result)
                 } else {
-                    setPreNumbers(result);
-                    setValue(result.toString());
+                    setPreNumbers(result)
+                    setValue(result.toString())
                 }
             } else {
-                setPreNumbers(b);
+                setPreNumbers(b)
             }
            
-            setSigno("");
-            setLimpiar(true);
+            setSigno("")
+            setLimpiar(true)
         }
     
            

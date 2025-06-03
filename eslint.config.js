@@ -33,6 +33,7 @@ export default defineConfig([
       "react/react-in-jsx-scope": "off",
       "react/jsx-no-target-blank": ["error", { allowReferrer: false }],
       semi: ["error", "never"],
+      "max-len": ["error", { "code": 120 }],
     },
 
     settings: {
