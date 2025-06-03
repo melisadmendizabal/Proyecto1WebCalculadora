@@ -29,3 +29,8 @@ npm test
 ```bash
 npm run lint
 ```
+3. Storybook: Para poder ver los elementos definidos en el storybook.
+```bash
+npm run storybook
+```
+Abre http://localhost:6006/ para ver la calculadora en tu navegador.
