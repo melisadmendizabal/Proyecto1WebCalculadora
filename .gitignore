@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 *storybook.log
+.storybook/
+
+# Monorepo (optional)
+**/node_modules/
+**/CalcKuromi/
+**/.bun/
